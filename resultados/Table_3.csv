@@ -1,0 +1,7 @@
+"Key","Analysis","MRT, °C (percentile) [95% CI]","RR 99th vs MRT (95% CI)","RR 1st vs MRT (95% CI)","Within primary 95% CI (99th; 1st)","Same direction (99th; 1st)"
+1,"Municipal temperature (case time series)","28.0 (92.7) [18.6–29.5]","1.006 (0.984–1.029)","1.018 (0.987–1.050)","yes; yes","yes; yes"
+2,"Lag 0–14","28.1 (93.1) [23.6–29.5]","1.013 (0.978–1.048)","1.057 (1.019–1.098)","yes; no","yes; yes"
+3,"ns(time, 99 df), no strata","27.9 (91.4) [18.8–29.5]","1.016 (0.988–1.045)","1.012 (0.985–1.039)","yes; yes","yes; yes"
+4,"+ PM2.5 (lag 0–1, linear)","28.2 (93.8) [18.8–29.5]","1.003 (0.979–1.029)","1.021 (0.991–1.052)","yes; yes","yes; yes"
+5,"γ = 1 in the offset","28.4 (95.1) [18.8–29.5]","1.002 (0.980–1.025)","1.018 (0.987–1.050)","yes; yes","yes; yes"
+6,"Spontaneous preterm birth (i)","22.3 (15.4) [20.2–29.5]","1.021 (0.978–1.066)","1.026 (0.994–1.060)","yes; yes","yes; yes"

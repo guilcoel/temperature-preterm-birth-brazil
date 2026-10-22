@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite it as below."
+type: dataset
+title: "Prespecified analysis plan, analysis code and aggregated results for short-term ambient temperature and preterm birth in 26 Brazilian urban concentrations, 2012-2024"
+authors:
+  - family-names: "Coelho"
+    given-names: "Guilherme"
+    orcid: "https://orcid.org/0000-0003-3045-4057"
+    affiliation: "Universidade Estadual de Campinas (UNICAMP)"
+  - family-names: "Charles"
+    given-names: "Charles M'poca"
+    orcid: "https://orcid.org/0000-0001-7133-0574"
+    affiliation: "Universidade Estadual de Campinas (UNICAMP)"
+  - family-names: "Coelho"
+    given-names: "Clarimar José"
+    orcid: "https://orcid.org/0000-0002-5163-2986"
+    affiliation: "Pontifícia Universidade Católica de Goiás (PUC Goiás)"
+  - family-names: "Kassada"
+    given-names: "Danielle Satie"
+    orcid: "https://orcid.org/0000-0002-6960-6444"
+    affiliation: "Universidade Estadual de Campinas (UNICAMP)"
+  - family-names: "Pacagnella"
+    given-names: "Rodolfo de Carvalho"
+    orcid: "https://orcid.org/0000-0002-5739-0009"
+    affiliation: "Universidade Estadual de Campinas (UNICAMP)"
+doi: 10.25824/redu/PWKND6
+version: "v4"
+date-released: "2026-10-22"
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/guilcoel/temperature-preterm-birth-brazil"

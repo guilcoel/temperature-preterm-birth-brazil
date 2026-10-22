@@ -1,0 +1,8 @@
+"Quantity","Observed","Null median","Null 2.5th–97.5th percentiles"
+"Attributable fraction, total","1.84%","1.67%","0.83%–3.00%"
+"Attributable fraction, heat","0.23%","0.73%","0.08%–2.08%"
+"Attributable fraction, cold","1.61%","0.79%","0.11%–2.19%"
+"Pooled RR, 99th percentile vs MRT","1.003","1.008","1.000–1.035"
+"Pooled RR, 1st percentile vs MRT","1.020","1.008","1.000–1.032"
+"Concentrations with the MRT at the 99th percentile, n","10","6","0–18"
+"Concentrations with the MRT at the 1st percentile, n","0","6","0–19"

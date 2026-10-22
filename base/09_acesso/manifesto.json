@@ -1,0 +1,4844 @@
+{
+ "base": "dados_artigos_perinatais_clima",
+ "versao": "4443971b",
+ "data_manifesto": "2026-10-08",
+ "gerado_em": "2026-10-08T20:09:51-03:00",
+ "descricao_versao": "8 primeiros hex do SHA-256 da lista ordenada caminho:md5 dos arquivos abaixo; só depende dos dados",
+ "ambiente": {
+  "python": "3.12.7",
+  "polars": "1.44.2",
+  "pandas": "3.0.6",
+  "pyarrow": "25.0.1",
+  "R": "R version 4.5.1 (2025-06-13)",
+  "gigs": "0.5.2.9000 (fb58fe6596d4b289d5362c5efe00f882984d3186)",
+  "arrow_R": "21.0.0.1"
+ },
+ "scripts_md5_no_manifesto": {
+  "00_scripts/01_download_sinasc.py": "e89dc55b28ac7aa641f5024a9c83293d",
+  "00_scripts/02_download_sim.py": "c1175da808b2e403365921ed4d102ee6",
+  "00_scripts/03_download_clima.py": "090519bd2b36d1ec88383e9deb084b57",
+  "00_scripts/03b_download_cams.py": "b56b9c5eb7595e5a27e1d36059ecea12",
+  "00_scripts/04_regioes_metropolitanas.py": "146887acdda4eddd5a106c5c3114fee6",
+  "00_scripts/05_shapefiles.py": "25503dc36034cf4a25b28f9a90acc332",
+  "00_scripts/06a_clima_municipal.py": "a042052395f3a5500dd55bf9c4d1f0d5",
+  "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+  "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+  "00_scripts/06d_gestacoes_em_risco.py": "47761f6760c32e2a45af6f890e06db7a",
+  "00_scripts/06d_validar_forca_bruta.py": "7f99b38179bf53dffbe9aa14f555cd6b",
+  "00_scripts/06e_calendario.py": "31c6281dfa0d7a24f92defcbc76bc5cf",
+  "00_scripts/07a_referencias_pig.py": "be18c15f6915d7437b413666065c92ca",
+  "00_scripts/08_manifesto.py": "ffabf7fd15e216b654a4096dc5549c10",
+  "00_scripts/97_relatorio_entrega.py": "96debabdcd32d0cca964648988b30c73",
+  "00_scripts/98_aceite_fase1.py": "47e974a4766e8deebd1b2372662d5b47",
+  "00_scripts/98b_codigos_residencia.py": "f2e858bd20395b00cb9de041360cafd1",
+  "00_scripts/99_relatorio_integridade.py": "d72d28cc575640db44907c0c9063045e",
+  "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+  "00_scripts/datasus.py": "a7b35c7bdfc08342bf6976d195b47567",
+  "00_scripts/testes/MAPA_ESPECIFICACAO.md": "075a890b0e841a22ed85ab0c91f88a2b",
+  "00_scripts/testes/autoauditoria_06b_06d.py": "bc54ecd3ac0945a8f5465bfe37f7d5ee",
+  "00_scripts/testes/autoauditoria_ig_dum_sem.py": "c7ab95d274c35c81aa0e5bbfa9294ab1",
+  "00_scripts/testes/conciliacao_coordenacao_20261007.py": "0f2db4f883082d1312ec0004f57500b3",
+  "00_scripts/testes/conferencia_06b_independente.py": "768679c39318e23d2fc56c0c1eba00ef",
+  "00_scripts/testes/conferencia_06c_independente.py": "0d81f23b386162cc059a5da6603fbaeb",
+  "00_scripts/testes/conferencia_07_independente.py": "1f3a00b6fd9864afef95b851ffdd89dd",
+  "00_scripts/testes/descritivo_ig_dum_sem.py": "48bc033551a1a03115007ba9527e7501",
+  "00_scripts/testes/mutantes_ig_dum_sem.py": "72c43bfe6c6bec980d156bb82ab1af88",
+  "00_scripts/testes/nao_regressao_ig_dum_sem.py": "3d4263663bf31e385abd81eaa2b7e68e",
+  "00_scripts/testes/paridade_ig_dum_sem.R": "3e2a636c48385055f0dccf5074479380",
+  "00_scripts/testes/paridade_ig_dum_sem.py": "f50a912d775bdd47f27fb571a3410817",
+  "00_scripts/testes/questionamento_20261007.py": "e420d1d151be3a147200e5b095be6be8",
+  "00_scripts/testes/questionamento_20261007_ambiente.R": "3d98fec49727dabcfe4cbbc58477dcf0",
+  "00_scripts/testes/teste_06a_sintetico.py": "f6a40617f123b3d71988a40617c18690",
+  "00_scripts/testes/teste_06b_sintetico.py": "ba69781a9c3e9364afe9063bb932bdf3",
+  "00_scripts/testes/teste_06c_sintetico.py": "02ac8382b66518b37af1301ea33fc5ce",
+  "00_scripts/testes/teste_06d_sintetico.py": "d301c287bd7ca41921a663e3794d77f9",
+  "00_scripts/testes/teste_07_sintetico.R": "6a50c8fcbdd884acfb3842cec63768b4",
+  "00_scripts/testes/teste_acesso.R": "904f3a589a47ba12a5d32b7ff1ebde8d",
+  "00_scripts/testes/teste_acesso.py": "7f52c88679348c3fb6477a7d7bb40377",
+  "00_scripts/testes/teste_dicionario.py": "203a1b3c3860ad9906a38e88060ccfe6",
+  "00_scripts/testes/teste_ig_dum_sem_sintetico.py": "75b421884e5858f97fd7628a33f51176",
+  "00_scripts/testes/teste_proveniencia.py": "e7582f9f84fbf42074dfbd1e98922f4b",
+  "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc",
+  "07_pig_referencia/07b_pig_classificacao.R": "fc1ab1ca1d0d8d9d6f69ec0d61ae80a0",
+  "09_acesso/acesso.R": "f85be7f6fb9e3d1f0eec41e7f7dba62d",
+  "09_acesso/acesso.py": "247dfc31615306ed31f586447a9c647c"
+ },
+ "arquivos": [
+  {
+   "caminho": "06_processados/nascimentos.parquet",
+   "md5": "3a78e7ddcfd1f3c4f86e910087347698",
+   "bytes": 207901697,
+   "n_linhas": 16116860,
+   "n_colunas": 52,
+   "colunas": [
+    {
+     "nome": "id_nasc",
+     "tipo": "int64"
+    },
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "ano",
+     "tipo": "int16"
+    },
+    {
+     "nome": "ga_sem",
+     "tipo": "int16"
+    },
+    {
+     "nome": "semagestac_bruto",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "ig_cat",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "gestacao_cat",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "metodo_ig",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "unico",
+     "tipo": "bool"
+    },
+    {
+     "nome": "gravidez",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "grav_cat",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "pop_ptb",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb_extremo",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb_muito",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb_moderado_tardio",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ig_43_44",
+     "tipo": "bool"
+    },
+    {
+     "nome": "coorte_fixa_22",
+     "tipo": "bool"
+    },
+    {
+     "nome": "coorte_fixa_37",
+     "tipo": "bool"
+    },
+    {
+     "nome": "periodo_principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "periodo_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "nv_gestacao_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb_gestacao_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "peso_g",
+     "tipo": "int16"
+    },
+    {
+     "nome": "sexo",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "idade_mae",
+     "tipo": "int16"
+    },
+    {
+     "nome": "escmae2010",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "escmae",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "raca_mae",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "estciv_mae",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "n_gest_ant",
+     "tipo": "int16"
+    },
+    {
+     "nome": "n_part_vag",
+     "tipo": "int16"
+    },
+    {
+     "nome": "n_part_ces",
+     "tipo": "int16"
+    },
+    {
+     "nome": "paridade",
+     "tipo": "int16"
+    },
+    {
+     "nome": "paridade_filvivo",
+     "tipo": "int16"
+    },
+    {
+     "nome": "n_fil_mort",
+     "tipo": "int16"
+    },
+    {
+     "nome": "flag_paridade_incoerente",
+     "tipo": "bool"
+    },
+    {
+     "nome": "n_consultas",
+     "tipo": "int16"
+    },
+    {
+     "nome": "consultas_cat",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "parto",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "sttrabpart",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "stcesparto",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "stcesparto_aj",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "apresentacao",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "robson",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "idanomal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "codanomal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "uf_arquivo",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "status_arquivo",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "ig_dum_sem",
+     "tipo": "int16"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "microdado",
+   "descricao": "nascido vivo residente nos 277 municípios, 2011–2024",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:29-03:00"
+  },
+  {
+   "caminho": "06_processados/obitos_perinatais.parquet",
+   "md5": "3fc57216d26cbd236d6acc0bbd7bdd08",
+   "bytes": 3944478,
+   "n_linhas": 259909,
+   "n_colunas": 33,
+   "colunas": [
+    {
+     "nome": "id_obito",
+     "tipo": "int64"
+    },
+    {
+     "nome": "tipo",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data_indice",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "data_obito",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "data_nasc",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "ano_obito",
+     "tipo": "int16"
+    },
+    {
+     "nome": "ga_sem",
+     "tipo": "int16"
+    },
+    {
+     "nome": "semagestac_bruto",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "gestacao_cat",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "peso_g",
+     "tipo": "int16"
+    },
+    {
+     "nome": "criterio_fetal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "unico",
+     "tipo": "bool"
+    },
+    {
+     "nome": "gravidez",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "ig_22_42",
+     "tipo": "bool"
+    },
+    {
+     "nome": "s_ini",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "coorte_fixa_22",
+     "tipo": "bool"
+    },
+    {
+     "nome": "principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "sem_ig",
+     "tipo": "bool"
+    },
+    {
+     "nome": "idade",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "idade_valida",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ate24h",
+     "tipo": "bool"
+    },
+    {
+     "nome": "sexo",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "raca_cor",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "parto",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "obitoparto",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "idade_mae",
+     "tipo": "int16"
+    },
+    {
+     "nome": "causabas",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "anomalia_causabas",
+     "tipo": "bool"
+    },
+    {
+     "nome": "anomalia_qualquer_linha",
+     "tipo": "bool"
+    },
+    {
+     "nome": "cb_cap16_perinatal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "uf_arquivo",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "status_arquivo",
+     "tipo": "large_string"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "microdado",
+   "descricao": "óbito fetal e neonatal precoce residente, 2011–2024",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:30-03:00"
+  },
+  {
+   "caminho": "06_processados/serie_diaria_municipio.parquet",
+   "md5": "1f0ded6fdb15b11c184191d0a6690025",
+   "bytes": 3149097,
+   "n_linhas": 1416578,
+   "n_colunas": 26,
+   "colunas": [
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "nv_unicos",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_multiplos_ou_ign",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_extremo",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_muito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_moderado_tardio",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_ig_43_44",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_principal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_ate24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_sem_anomalia",
+     "tipo": "int32"
+    },
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "tipo_recorte",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "periodo_principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "periodo_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "censura_neonatal_dez2024",
+     "tipo": "bool"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "restrito",
+   "descricao": "município × dia 2011–2024, com coorte fixa",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:31-03:00"
+  },
+  {
+   "caminho": "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet",
+   "md5": "74cfbb511ec7ebcdea21686e4a74ca90",
+   "bytes": 3232423,
+   "n_linhas": 1416578,
+   "n_colunas": 26,
+   "colunas": [
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "nv_unicos",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_multiplos_ou_ign",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_extremo",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_muito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_moderado_tardio",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_ig_43_44",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_principal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_ate24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_sem_anomalia",
+     "tipo": "int32"
+    },
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "tipo_recorte",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "periodo_principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "periodo_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "censura_neonatal_dez2024",
+     "tipo": "bool"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "restrito",
+   "descricao": "município × dia 2011–2024, sem coorte fixa",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:31-03:00"
+  },
+  {
+   "caminho": "06_processados/gestacoes_em_risco.parquet",
+   "md5": "14fd418d61376c0cbfa1dbb6c11a16ed",
+   "bytes": 33010430,
+   "n_linhas": 24290331,
+   "n_colunas": 5,
+   "colunas": [
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "semana",
+     "tipo": "int16"
+    },
+    {
+     "nome": "z_nv",
+     "tipo": "int32"
+    },
+    {
+     "nome": "z_fetal",
+     "tipo": "int32"
+    }
+   ],
+   "gerado_por": "06d_gestacoes_em_risco.py",
+   "sigilo": "restrito",
+   "descricao": "município × dia × semana gestacional (E7)",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06d_gestacoes_em_risco.py@2026-10-08T20:08:04-03:00#86119-1791500884635646000",
+    "insumos": {
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/obitos_perinatais.parquet": "3fc57216d26cbd236d6acc0bbd7bdd08",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "00_scripts/06d_gestacoes_em_risco.py": "47761f6760c32e2a45af6f890e06db7a",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:04-03:00"
+  },
+  {
+   "caminho": "06_processados/clima_municipio_diario_2010_2025.parquet",
+   "md5": "4c7cbe6c14652cb19b609f42134f8b32",
+   "bytes": 61057719,
+   "n_linhas": 1526270,
+   "n_colunas": 8,
+   "colunas": [
+    {
+     "nome": "CD_MUN",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "tmax",
+     "tipo": "double"
+    },
+    {
+     "nome": "tmin",
+     "tipo": "double"
+    },
+    {
+     "nome": "tmean",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_mean",
+     "tipo": "double"
+    },
+    {
+     "nome": "pr",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06a_clima_municipal.py",
+   "sigilo": "publico",
+   "descricao": "BR-DWGD por município × dia",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06a_clima_municipal.py@2026-10-06T11:26:05-03:00#8075-1791296765190744000",
+    "insumos": {
+     "integridade:BR-DWGD": "ba2061c288d2d597de7d46ec8c6487c8",
+     "integridade:CAMS-EAC4": "bcf482dacc23a855910aa5afa048615c",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "00_scripts/06a_clima_municipal.py": "a042052395f3a5500dd55bf9c4d1f0d5",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:25:57-03:00"
+  },
+  {
+   "caminho": "06_processados/pm25_municipio_diario_2010_2025.parquet",
+   "md5": "7d6ba7f4134e1163e2bda64e1aec174f",
+   "bytes": 38293326,
+   "n_linhas": 1526270,
+   "n_colunas": 9,
+   "colunas": [
+    {
+     "nome": "CD_MUN",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "pm25",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na",
+     "tipo": "double"
+    },
+    {
+     "nome": "n_horarios",
+     "tipo": "int64"
+    },
+    {
+     "nome": "n_horarios_zero",
+     "tipo": "int64"
+    }
+   ],
+   "gerado_por": "06a_clima_municipal.py",
+   "sigilo": "publico",
+   "descricao": "CAMS EAC4 PM2.5 por município × dia",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06a_clima_municipal.py@2026-10-06T11:26:05-03:00#8075-1791296765190744000",
+    "insumos": {
+     "integridade:BR-DWGD": "ba2061c288d2d597de7d46ec8c6487c8",
+     "integridade:CAMS-EAC4": "bcf482dacc23a855910aa5afa048615c",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "00_scripts/06a_clima_municipal.py": "a042052395f3a5500dd55bf9c4d1f0d5",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:26:05-03:00"
+  },
+  {
+   "caminho": "06_processados/clima_pesos_municipio.parquet",
+   "md5": "737f7d88e41ddc942a7809db42fc7c1d",
+   "bytes": 39362,
+   "n_linhas": 2448,
+   "n_colunas": 7,
+   "colunas": [
+    {
+     "nome": "CD_MUN",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "i_lat",
+     "tipo": "int64"
+    },
+    {
+     "nome": "i_lon",
+     "tipo": "int64"
+    },
+    {
+     "nome": "w",
+     "tipo": "double"
+    },
+    {
+     "nome": "metodo",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dist_graus",
+     "tipo": "double"
+    },
+    {
+     "nome": "frac_area_coberta",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06a_clima_municipal.py",
+   "sigilo": "publico",
+   "descricao": "pesos de área BR-DWGD",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06a_clima_municipal.py@2026-10-06T11:26:05-03:00#8075-1791296765190744000",
+    "insumos": {
+     "integridade:BR-DWGD": "ba2061c288d2d597de7d46ec8c6487c8",
+     "integridade:CAMS-EAC4": "bcf482dacc23a855910aa5afa048615c",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "00_scripts/06a_clima_municipal.py": "a042052395f3a5500dd55bf9c4d1f0d5",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:25:37-03:00"
+  },
+  {
+   "caminho": "06_processados/pm25_pesos_municipio.parquet",
+   "md5": "2ef2dc5025c9769fbb2815d6a45da628",
+   "bytes": 12398,
+   "n_linhas": 491,
+   "n_colunas": 7,
+   "colunas": [
+    {
+     "nome": "CD_MUN",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "i_lat",
+     "tipo": "int64"
+    },
+    {
+     "nome": "i_lon",
+     "tipo": "int64"
+    },
+    {
+     "nome": "w",
+     "tipo": "double"
+    },
+    {
+     "nome": "metodo",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dist_graus",
+     "tipo": "double"
+    },
+    {
+     "nome": "frac_area_coberta",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06a_clima_municipal.py",
+   "sigilo": "publico",
+   "descricao": "pesos de área CAMS",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06a_clima_municipal.py@2026-10-06T11:26:05-03:00#8075-1791296765190744000",
+    "insumos": {
+     "integridade:BR-DWGD": "ba2061c288d2d597de7d46ec8c6487c8",
+     "integridade:CAMS-EAC4": "bcf482dacc23a855910aa5afa048615c",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "00_scripts/06a_clima_municipal.py": "a042052395f3a5500dd55bf9c4d1f0d5",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:26:01-03:00"
+  },
+  {
+   "caminho": "06_processados/calendario_2010_2025.parquet",
+   "md5": "5c719b2b2d97757ac0bbeac8e59c8dbf",
+   "bytes": 39695,
+   "n_linhas": 5510,
+   "n_colunas": 12,
+   "colunas": [
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "ano",
+     "tipo": "int32"
+    },
+    {
+     "nome": "mes",
+     "tipo": "int32"
+    },
+    {
+     "nome": "dia_semana",
+     "tipo": "int32"
+    },
+    {
+     "nome": "fim_de_semana",
+     "tipo": "int64"
+    },
+    {
+     "nome": "feriado_nacional",
+     "tipo": "int64"
+    },
+    {
+     "nome": "feriado_nome",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "base_legal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "carnaval",
+     "tipo": "int64"
+    },
+    {
+     "nome": "quarta_cinzas",
+     "tipo": "int64"
+    },
+    {
+     "nome": "sexta_paixao",
+     "tipo": "int64"
+    },
+    {
+     "nome": "corpus_christi",
+     "tipo": "int64"
+    }
+   ],
+   "gerado_por": "06e_calendario.py",
+   "sigilo": "publico",
+   "descricao": "calendário de feriados",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06e_calendario.py@2026-10-06T11:26:06-03:00#8160-1791296766300103000",
+    "insumos": {
+     "integridade:PLANALTO-lei": "0d632e03e21b318b76667faa046946aa",
+     "00_scripts/06e_calendario.py": "31c6281dfa0d7a24f92defcbc76bc5cf",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:26:06-03:00"
+  },
+  {
+   "caminho": "06_processados/serie_diaria_municipio_clima.parquet",
+   "md5": "c4793a0ca548c7084bc5f5fdef510ea9",
+   "bytes": 60251151,
+   "n_linhas": 1424334,
+   "n_colunas": 38,
+   "colunas": [
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "nv_unicos",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_multiplos_ou_ign",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_extremo",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_muito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_moderado_tardio",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_ig_43_44",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_principal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_ate24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_sem_anomalia",
+     "tipo": "int32"
+    },
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "tipo_recorte",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "periodo_principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "periodo_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "censura_neonatal_dez2024",
+     "tipo": "bool"
+    },
+    {
+     "nome": "tmean_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "tmean_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na_nucleo",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "restrito",
+   "descricao": "município × dia, grade E9, contagens + exposições",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:08-03:00"
+  },
+  {
+   "caminho": "06_processados/serie_diaria_municipio_clima_sem_coorte_fixa.parquet",
+   "md5": "4ef14b17aab4a05653c2e779b0379c10",
+   "bytes": 60334225,
+   "n_linhas": 1424334,
+   "n_colunas": 38,
+   "colunas": [
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "nv_unicos",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_multiplos_ou_ign",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_extremo",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_muito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_moderado_tardio",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_ig_43_44",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_principal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_ate24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_sem_anomalia",
+     "tipo": "int32"
+    },
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "tipo_recorte",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "periodo_principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "periodo_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ptb_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "censura_neonatal_dez2024",
+     "tipo": "bool"
+    },
+    {
+     "nome": "tmean_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na_mun",
+     "tipo": "double"
+    },
+    {
+     "nome": "tmean_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na_nucleo",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "restrito",
+   "descricao": "idem, sem coorte fixa",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:09-03:00"
+  },
+  {
+   "caminho": "06_processados/serie_diaria_recorte.parquet",
+   "md5": "f36cb6649c3b8c9936fe7705059088a8",
+   "bytes": 12342976,
+   "n_linhas": 133692,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "tipo_recorte",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "nv_unicos",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_multiplos_ou_ign",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_extremo",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_muito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_moderado_tardio",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_ig_43_44",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_principal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_ate24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_sem_anomalia",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "periodo_principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "periodo_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "censura_neonatal_dez2024",
+     "tipo": "bool"
+    },
+    {
+     "nome": "n_municipios",
+     "tipo": "uint32"
+    },
+    {
+     "nome": "CD_MUN6_NUCLEO",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "tmean_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "tmean_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na_rm_nv",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "restrito",
+   "descricao": "concentração × dia, grade E9 (série principal)",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:08-03:00"
+  },
+  {
+   "caminho": "06_processados/serie_diaria_recorte_sem_coorte_fixa.parquet",
+   "md5": "26b4e3ff71a57b578ad10cbbc239f7ef",
+   "bytes": 12369965,
+   "n_linhas": 133692,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "tipo_recorte",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "nv_unicos",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_multiplos_ou_ign",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_extremo",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_muito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_moderado_tardio",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_ig_43_44",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_principal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_fetal_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_sem_ig",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_neonatal_precoce_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_idx_obito",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_ate24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_24h",
+     "tipo": "int32"
+    },
+    {
+     "nome": "obito_perinatal_sem_anomalia",
+     "tipo": "int32"
+    },
+    {
+     "nome": "ptb_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "nv_gestacao_sens2011",
+     "tipo": "int32"
+    },
+    {
+     "nome": "periodo_principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "periodo_sens2011",
+     "tipo": "bool"
+    },
+    {
+     "nome": "censura_neonatal_dez2024",
+     "tipo": "bool"
+    },
+    {
+     "nome": "n_municipios",
+     "tipo": "uint32"
+    },
+    {
+     "nome": "CD_MUN6_NUCLEO",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "tmean_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na_nucleo",
+     "tipo": "double"
+    },
+    {
+     "nome": "tmean_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "rh_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_zero_na_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_rm_nv",
+     "tipo": "double"
+    },
+    {
+     "nome": "pm25_local_zero_na_rm_nv",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "restrito",
+   "descricao": "idem, sem coorte fixa",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:09-03:00"
+  },
+  {
+   "caminho": "06_processados/gestacoes_em_risco_recorte.parquet",
+   "md5": "9a371ebc788349c251da4c61a15198af",
+   "bytes": 4632121,
+   "n_linhas": 2500825,
+   "n_colunas": 5,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "data",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "semana",
+     "tipo": "int16"
+    },
+    {
+     "nome": "z_nv",
+     "tipo": "int32"
+    },
+    {
+     "nome": "z_fetal",
+     "tipo": "int32"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "restrito",
+   "descricao": "concentração × dia × semana gestacional",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:10-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_tmean_nucleo.parquet",
+   "md5": "8d202ead98c31964aec47109db3b5547",
+   "bytes": 38317053,
+   "n_linhas": 142454,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de tmean, versão nucleo",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:10-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_tmean_rm_nv.parquet",
+   "md5": "bf4b8562641954f2020226ef443396e8",
+   "bytes": 38316730,
+   "n_linhas": 142454,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de tmean, versão rm_nv",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:10-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_tmean_mun.parquet",
+   "md5": "09284c63d55e6c36ec1aa23067c6e7a1",
+   "bytes": 408076494,
+   "n_linhas": 1517683,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de tmean, versão mun",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:11-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_rh_nucleo.parquet",
+   "md5": "ca736aace4c2ecfd0f3e36cec9c2be03",
+   "bytes": 38183789,
+   "n_linhas": 142454,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de rh, versão nucleo",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:12-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_rh_rm_nv.parquet",
+   "md5": "c48908797ffbeb62a5463fb0ac4ffe65",
+   "bytes": 38182005,
+   "n_linhas": 142454,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de rh, versão rm_nv",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:12-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_rh_mun.parquet",
+   "md5": "9ece1477e308a5536b2b47748e5700d5",
+   "bytes": 396388648,
+   "n_linhas": 1517683,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de rh, versão mun",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:13-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_pm25_nucleo.parquet",
+   "md5": "595ce3b19f96860e8ce01aaa49a1fc9c",
+   "bytes": 37104366,
+   "n_linhas": 142454,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de pm25, versão nucleo",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:14-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_pm25_rm_nv.parquet",
+   "md5": "68a6676c175351d7bca54d08593a6561",
+   "bytes": 38934521,
+   "n_linhas": 142454,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de pm25, versão rm_nv",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:14-03:00"
+  },
+  {
+   "caminho": "06_processados/expo_semanal_pm25_mun.parquet",
+   "md5": "c612949724373b9634fb6b30b53cc095",
+   "bytes": 278987049,
+   "n_linhas": 1517683,
+   "n_colunas": 39,
+   "colunas": [
+    {
+     "nome": "CD_MUN6",
+     "tipo": "large_string"
+    },
+    {
+     "nome": "dum_est",
+     "tipo": "date32[day]"
+    },
+    {
+     "nome": "s01",
+     "tipo": "double"
+    },
+    {
+     "nome": "s02",
+     "tipo": "double"
+    },
+    {
+     "nome": "s03",
+     "tipo": "double"
+    },
+    {
+     "nome": "s04",
+     "tipo": "double"
+    },
+    {
+     "nome": "s05",
+     "tipo": "double"
+    },
+    {
+     "nome": "s06",
+     "tipo": "double"
+    },
+    {
+     "nome": "s07",
+     "tipo": "double"
+    },
+    {
+     "nome": "s08",
+     "tipo": "double"
+    },
+    {
+     "nome": "s09",
+     "tipo": "double"
+    },
+    {
+     "nome": "s10",
+     "tipo": "double"
+    },
+    {
+     "nome": "s11",
+     "tipo": "double"
+    },
+    {
+     "nome": "s12",
+     "tipo": "double"
+    },
+    {
+     "nome": "s13",
+     "tipo": "double"
+    },
+    {
+     "nome": "s14",
+     "tipo": "double"
+    },
+    {
+     "nome": "s15",
+     "tipo": "double"
+    },
+    {
+     "nome": "s16",
+     "tipo": "double"
+    },
+    {
+     "nome": "s17",
+     "tipo": "double"
+    },
+    {
+     "nome": "s18",
+     "tipo": "double"
+    },
+    {
+     "nome": "s19",
+     "tipo": "double"
+    },
+    {
+     "nome": "s20",
+     "tipo": "double"
+    },
+    {
+     "nome": "s21",
+     "tipo": "double"
+    },
+    {
+     "nome": "s22",
+     "tipo": "double"
+    },
+    {
+     "nome": "s23",
+     "tipo": "double"
+    },
+    {
+     "nome": "s24",
+     "tipo": "double"
+    },
+    {
+     "nome": "s25",
+     "tipo": "double"
+    },
+    {
+     "nome": "s26",
+     "tipo": "double"
+    },
+    {
+     "nome": "s27",
+     "tipo": "double"
+    },
+    {
+     "nome": "s28",
+     "tipo": "double"
+    },
+    {
+     "nome": "s29",
+     "tipo": "double"
+    },
+    {
+     "nome": "s30",
+     "tipo": "double"
+    },
+    {
+     "nome": "s31",
+     "tipo": "double"
+    },
+    {
+     "nome": "s32",
+     "tipo": "double"
+    },
+    {
+     "nome": "s33",
+     "tipo": "double"
+    },
+    {
+     "nome": "s34",
+     "tipo": "double"
+    },
+    {
+     "nome": "s35",
+     "tipo": "double"
+    },
+    {
+     "nome": "s36",
+     "tipo": "double"
+    },
+    {
+     "nome": "s37",
+     "tipo": "double"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "matriz semanal s01..s37 de pm25, versão mun",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:15-03:00"
+  },
+  {
+   "caminho": "06_processados/pig_classificacao.parquet",
+   "md5": "7aeecfc1a67fc675b22bc59bc83b3a36",
+   "bytes": 64342381,
+   "n_linhas": 14827644,
+   "n_colunas": 14,
+   "colunas": [
+    {
+     "nome": "id_nasc",
+     "tipo": "int64"
+    },
+    {
+     "nome": "pop_pig_principal",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_sens_pretermo",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ig21_ref_nao_verificada",
+     "tipo": "bool"
+    },
+    {
+     "nome": "ig21_z",
+     "tipo": "double"
+    },
+    {
+     "nome": "ig21_z_extremo",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_ig21",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_ig21_p3",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_ig21_g0",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_ig21_g6",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_pedreira",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_oms",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_oms_meio_semana",
+     "tipo": "bool"
+    },
+    {
+     "nome": "pig_oms_sem_sexo",
+     "tipo": "bool"
+    }
+   ],
+   "gerado_por": "07b_pig_classificacao.R",
+   "sigilo": "microdado",
+   "descricao": "classificação do PIG por nascido vivo (id_nasc)",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "07b_pig_classificacao.R@2026-10-08T20:09:18-03:00#86269-1791500958779040",
+    "insumos": {
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "07_pig_referencia/oms_kiserud2017_p10.csv": "44d8d12044826f984a9d821e221dffa6",
+     "07_pig_referencia/pedreira2011_p10.csv": "2a82b376a80a63799f4c89bef8dc794a",
+     "07_pig_referencia/07b_pig_classificacao.R": "fc1ab1ca1d0d8d9d6f69ec0d61ae80a0"
+    }
+   },
+   "modificado_em": "2026-10-08T20:09:17-03:00"
+  },
+  {
+   "caminho": "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv",
+   "md5": "c118857dbc825f182735f847e927a8d7",
+   "bytes": 21142,
+   "n_linhas": 277,
+   "n_colunas": 9,
+   "colunas": [
+    {
+     "nome": "CD_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "TIPO_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "CD_MUN",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "CD_MUN6",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_MUN",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "SIGLA_UF",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "POP_CENSO2010",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "POP_CENSO2022",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "04_regioes_metropolitanas.py",
+   "sigilo": "publico",
+   "descricao": "277 municípios das 26 concentrações",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "04_regioes_metropolitanas.py@2026-10-06T11:25:29-03:00#8057-1791296729067590000",
+    "insumos": {
+     "integridade:IBGE-ARRANJOS": "2b191d7edd41c2300c99f76a52b11af5",
+     "integridade:IBGE-Censo2022": "bdcd1557d54df3476d86459c90a7ba5e",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "00_scripts/04_regioes_metropolitanas.py": "146887acdda4eddd5a106c5c3114fee6",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:25:29-03:00"
+  },
+  {
+   "caminho": "04_regioes_metropolitanas/cidade_nucleo.csv",
+   "md5": "7da35560a5b6e5be0745561dbf2c7e58",
+   "bytes": 2899,
+   "n_linhas": 26,
+   "n_colunas": 13,
+   "colunas": [
+    {
+     "nome": "CD_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "TIPO_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "N_MUNICIPIOS",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "POP_CENSO2010_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "POP_CENSO2022_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "CD_MUN_NUCLEO",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_MUN_NUCLEO",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "POP_CENSO2022_NUCLEO",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "CD_MUN_SEDE_IBGE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_MUN_SEDE_IBGE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "POP_CENSO2022_SEDE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NUCLEO_DIFERE_SEDE",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "04_regioes_metropolitanas.py",
+   "sigilo": "publico",
+   "descricao": "cidade-núcleo de cada concentração",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "04_regioes_metropolitanas.py@2026-10-06T11:25:29-03:00#8057-1791296729067590000",
+    "insumos": {
+     "integridade:IBGE-ARRANJOS": "2b191d7edd41c2300c99f76a52b11af5",
+     "integridade:IBGE-Censo2022": "bdcd1557d54df3476d86459c90a7ba5e",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "00_scripts/04_regioes_metropolitanas.py": "146887acdda4eddd5a106c5c3114fee6",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:25:29-03:00"
+  },
+  {
+   "caminho": "04_regioes_metropolitanas/municipios_novos_origem.csv",
+   "md5": "1468fb4728dc2eeb274672f93564a676",
+   "bytes": 948,
+   "n_linhas": 6,
+   "n_colunas": 8,
+   "colunas": [
+    {
+     "nome": "CD_MUN",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_MUN",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "SIGLA_UF",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "CONCENTRACOES_VIZINHAS",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ENCOSTA_EM_CONCENTRACAO",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "CD_MUN_ORIGEM",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ANO_INSTALACAO",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "FONTE",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "04_regioes_metropolitanas.py",
+   "sigilo": "publico",
+   "descricao": "municípios instalados depois de 2010 (E17)",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "04_regioes_metropolitanas.py@2026-10-06T11:25:29-03:00#8057-1791296729067590000",
+    "insumos": {
+     "integridade:IBGE-ARRANJOS": "2b191d7edd41c2300c99f76a52b11af5",
+     "integridade:IBGE-Censo2022": "bdcd1557d54df3476d86459c90a7ba5e",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "00_scripts/04_regioes_metropolitanas.py": "146887acdda4eddd5a106c5c3114fee6",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:25:29-03:00"
+  },
+  {
+   "caminho": "04_regioes_metropolitanas/populacao_censo2022.csv",
+   "md5": "5c6c35238f22f7f821354a5611b8fb75",
+   "bytes": 215776,
+   "n_linhas": 5570,
+   "n_colunas": 4,
+   "colunas": [
+    {
+     "nome": "CD_MUN",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "CD_MUN6",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_MUN_UF",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "POP_CENSO2022",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "04_regioes_metropolitanas.py",
+   "sigilo": "publico",
+   "descricao": "população do Censo 2022 por município",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "04_regioes_metropolitanas.py@2026-10-06T11:25:29-03:00#8057-1791296729067590000",
+    "insumos": {
+     "integridade:IBGE-ARRANJOS": "2b191d7edd41c2300c99f76a52b11af5",
+     "integridade:IBGE-Censo2022": "bdcd1557d54df3476d86459c90a7ba5e",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "00_scripts/04_regioes_metropolitanas.py": "146887acdda4eddd5a106c5c3114fee6",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:25:27-03:00"
+  },
+  {
+   "caminho": "07_pig_referencia/oms_kiserud2017_p10.csv",
+   "md5": "44d8d12044826f984a9d821e221dffa6",
+   "bytes": 1625,
+   "n_linhas": 81,
+   "n_colunas": 4,
+   "colunas": [
+    {
+     "nome": "semana",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "sexo",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "p10_g",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "tabela",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "07a_referencias_pig.py",
+   "sigilo": "publico",
+   "descricao": "p10 OMS/Kiserud 2017 (dupla leitura)",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "07a_referencias_pig.py@2026-10-06T11:26:50-03:00#8270-1791296810988791000",
+    "insumos": {
+     "07_pig_referencia/originais/kiserud2017_plosmed.pdf": "745de4e3efbc8d34ef49549c0ade3543",
+     "07_pig_referencia/originais/kiserud2017_S1_File.xlsx": "4a83338744094f6df231c5d938897424",
+     "07_pig_referencia/originais/pedreira2011_aabc.pdf": "b2b72dfe0856482655a0369626edb0b0",
+     "07_pig_referencia/dupla_leitura": "012da8b55df181b5803dfd1597fc8b57",
+     "00_scripts/07a_referencias_pig.py": "be18c15f6915d7437b413666065c92ca",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:26:50-03:00"
+  },
+  {
+   "caminho": "07_pig_referencia/pedreira2011_p10.csv",
+   "md5": "2a82b376a80a63799f4c89bef8dc794a",
+   "bytes": 926,
+   "n_linhas": 42,
+   "n_colunas": 5,
+   "colunas": [
+    {
+     "nome": "semana",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "sexo",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "p10_g",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "tabela",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "observacao",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "07a_referencias_pig.py",
+   "sigilo": "publico",
+   "descricao": "p10 Pedreira 2011 (dupla leitura)",
+   "conferido_integridade": true,
+   "proveniencia": {
+    "execucao": "07a_referencias_pig.py@2026-10-06T11:26:50-03:00#8270-1791296810988791000",
+    "insumos": {
+     "07_pig_referencia/originais/kiserud2017_plosmed.pdf": "745de4e3efbc8d34ef49549c0ade3543",
+     "07_pig_referencia/originais/kiserud2017_S1_File.xlsx": "4a83338744094f6df231c5d938897424",
+     "07_pig_referencia/originais/pedreira2011_aabc.pdf": "b2b72dfe0856482655a0369626edb0b0",
+     "07_pig_referencia/dupla_leitura": "012da8b55df181b5803dfd1597fc8b57",
+     "00_scripts/07a_referencias_pig.py": "be18c15f6915d7437b413666065c92ca",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:26:50-03:00"
+  },
+  {
+   "caminho": "logs/fluxograma_exclusoes.csv",
+   "md5": "28440d0d6207901807436c3fee481406",
+   "bytes": 3074,
+   "n_linhas": 42,
+   "n_colunas": 16,
+   "colunas": [
+    {
+     "nome": "sistema",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ano",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "total_residentes",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "nao_unico",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "unico_ig_ausente",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "unico_ig_lt22",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "unico_ig_43_44",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "unico_ig_ge45",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "populacao_principal",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "fora_coorte_fixa_22",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "na_serie_principal",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "unico_ig_ausente_sem_ig",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "unico_ig_ausente_excluido",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "unico_ig_fora_22_42",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "unico_ig_22_42_sem_data_ou_idade",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "do_neonatal_idade_ausente_datas_ate6d",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "publico",
+   "descricao": "fluxograma de exclusões (Brasil × ano)",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:31-03:00"
+  },
+  {
+   "caminho": "logs/totais_anuais.csv",
+   "md5": "f5f9c998c7e1a40b174021b9d941408d",
+   "bytes": 3377,
+   "n_linhas": 28,
+   "n_colunas": 21,
+   "colunas": [
+    {
+     "nome": "versao",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ano",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "nv_unicos",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "nv_multiplos_ou_ign",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ptb",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ptb_extremo",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ptb_muito",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ptb_moderado_tardio",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "nv_ig_43_44",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_fetal_principal",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_fetal_sem_ig",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_neonatal_precoce",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_neonatal_precoce_sem_ig",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_perinatal",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_neonatal_precoce_idx_obito",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_perinatal_idx_obito",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_ate24h",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_perinatal_24h",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "obito_perinatal_sem_anomalia",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ptb_gestacao_sens2011",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "nv_gestacao_sens2011",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "publico",
+   "descricao": "totais anuais das séries",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:31-03:00"
+  },
+  {
+   "caminho": "logs/obitos_por_criterio.csv",
+   "md5": "d98dba7cef34fc4090077e2e9b41bc59",
+   "bytes": 1076,
+   "n_linhas": 28,
+   "n_colunas": 7,
+   "colunas": [
+    {
+     "nome": "ano",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "tipo",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "total",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "1_semagestac",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "2_gestacao",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "3_peso",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "sem_criterio_fetal",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "publico",
+   "descricao": "óbitos por critério",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:31-03:00"
+  },
+  {
+   "caminho": "logs/criterios_inclusao_recorte.csv",
+   "md5": "f8e7002508902588eaa622e707042a3c",
+   "bytes": 4657,
+   "n_linhas": 52,
+   "n_colunas": 13,
+   "colunas": [
+    {
+     "nome": "CD_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "dias_faltantes_tmean_nucleo",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "reprova_1a_etapa_exposicao",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "municipios_tmean_incompleto",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pct_nv_ig_e_peso_validos",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "flag_completude_90",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "populacao_pig_principal",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "desfecho",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "eventos_periodo_principal",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "flag_500",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "flag_1000",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "flag_2000",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "publico",
+   "descricao": "critérios de inclusão por concentração (E10)",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:31-03:00"
+  },
+  {
+   "caminho": "logs/validacao_e5_datas.csv",
+   "md5": "a3f47695787c5f29b560faaf10c04c95",
+   "bytes": 509,
+   "n_linhas": 14,
+   "n_colunas": 7,
+   "colunas": [
+    {
+     "nome": "ano",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "neonatais",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "dtnasc_ausente",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "dtnasc_depois_do_obito",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "idade_discorda_datas",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "com_as_duas_datas",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pct_concordancia",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "06b_desfechos.py",
+   "sigilo": "publico",
+   "descricao": "validação das datas do óbito neonatal (E5)",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "06b_desfechos.py@2026-10-08T20:07:32-03:00#85993-1791500852354679000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "00_scripts/06b_desfechos.py": "2e550aa25163566b37b5ffdbbf09c698",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:07:31-03:00"
+  },
+  {
+   "caminho": "logs/validacao_06d_forca_bruta.csv",
+   "md5": "f5abbd8a57958b5328591f9a32123392",
+   "bytes": 90,
+   "n_linhas": 5,
+   "n_colunas": 3,
+   "colunas": [
+    {
+     "nome": "combinacao",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "resultado",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "diferenca_agregada",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "06d_validar_forca_bruta.py",
+   "sigilo": "publico",
+   "descricao": "validação por força bruta do E7",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "06d_validar_forca_bruta.py@2026-10-08T20:08:06-03:00#86168-1791500886319960000",
+    "insumos": {
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/obitos_perinatais.parquet": "3fc57216d26cbd236d6acc0bbd7bdd08",
+     "00_scripts/06d_validar_forca_bruta.py": "7f99b38179bf53dffbe9aa14f555cd6b",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:06-03:00"
+  },
+  {
+   "caminho": "logs/dias_faltantes_clima.csv",
+   "md5": "417b0441595c2e56f55233b694cacd51",
+   "bytes": 21417,
+   "n_linhas": 1108,
+   "n_colunas": 6,
+   "colunas": [
+    {
+     "nome": "CD_MUN",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "variavel",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_dias_alguma_celula_sem_dado",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_dias_sem_dado",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "primeira_data",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ultima_data",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "06a_clima_municipal.py",
+   "sigilo": "publico",
+   "descricao": "dias faltantes do clima",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "06a_clima_municipal.py@2026-10-06T11:26:05-03:00#8075-1791296765190744000",
+    "insumos": {
+     "integridade:BR-DWGD": "ba2061c288d2d597de7d46ec8c6487c8",
+     "integridade:CAMS-EAC4": "bcf482dacc23a855910aa5afa048615c",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "00_scripts/06a_clima_municipal.py": "a042052395f3a5500dd55bf9c4d1f0d5",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:25:57-03:00"
+  },
+  {
+   "caminho": "logs/dias_faltantes_pm25.csv",
+   "md5": "8e9aae33f591166ae09501e83bda151f",
+   "bytes": 23443,
+   "n_linhas": 312,
+   "n_colunas": 13,
+   "colunas": [
+    {
+     "nome": "recorte_principal",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "NM_RECORTE",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "CD_MUN_NUCLEO",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "variante",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "versao",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_dias_grade",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_faltantes_grade",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_faltantes_2012_2024",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "primeira_falta",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ultima_falta",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_dias_renormalizados_grade",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_dias_renormalizados_2012_2024",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_municipios_com_falta",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "06c_exposicao.py",
+   "sigilo": "publico",
+   "descricao": "dias faltantes de PM2.5 (E16)",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "06c_exposicao.py@2026-10-08T20:08:17-03:00#86177-1791500897503215000",
+    "insumos": {
+     "06_processados/clima_municipio_diario_2010_2025.parquet": "4c7cbe6c14652cb19b609f42134f8b32",
+     "06_processados/pm25_municipio_diario_2010_2025.parquet": "7d6ba7f4134e1163e2bda64e1aec174f",
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "06_processados/serie_diaria_municipio.parquet": "1f0ded6fdb15b11c184191d0a6690025",
+     "06_processados/serie_diaria_municipio_sem_coorte_fixa.parquet": "74cfbb511ec7ebcdea21686e4a74ca90",
+     "06_processados/gestacoes_em_risco.parquet": "14fd418d61376c0cbfa1dbb6c11a16ed",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "04_regioes_metropolitanas/cidade_nucleo.csv": "7da35560a5b6e5be0745561dbf2c7e58",
+     "00_scripts/06c_exposicao.py": "320b3bb65f41a5c7ce2c5df32c5b266f",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-08T20:08:15-03:00"
+  },
+  {
+   "caminho": "logs/pig_resumo_ano.csv",
+   "md5": "89cc29a324b486eaecfd584a6e504081",
+   "bytes": 5599,
+   "n_linhas": 27,
+   "n_colunas": 24,
+   "colunas": [
+    {
+     "nome": "populacao",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ano",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "suprimido",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_termo_coorte37",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_sexo_ignorado",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_z_extremo",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_oms_na_41_42",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_ig21_n_classificados",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_ig21_pct",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_ig21_p3_n_classificados",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_ig21_p3_pct",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_ig21_g0_n_classificados",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_ig21_g0_pct",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_ig21_g6_n_classificados",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_ig21_g6_pct",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_pedreira_n_classificados",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_pedreira_pct",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_oms_n_classificados",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_oms_pct",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_oms_meio_semana_n_classificados",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_oms_meio_semana_pct",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_oms_sem_sexo_n_classificados",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pig_oms_sem_sexo_pct",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "07b_pig_classificacao.R",
+   "sigilo": "publico",
+   "descricao": "% de PIG por curva e ano",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "07b_pig_classificacao.R@2026-10-08T20:09:18-03:00#86269-1791500958779040",
+    "insumos": {
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "07_pig_referencia/oms_kiserud2017_p10.csv": "44d8d12044826f984a9d821e221dffa6",
+     "07_pig_referencia/pedreira2011_p10.csv": "2a82b376a80a63799f4c89bef8dc794a",
+     "07_pig_referencia/07b_pig_classificacao.R": "fc1ab1ca1d0d8d9d6f69ec0d61ae80a0"
+    }
+   },
+   "modificado_em": "2026-10-08T20:09:17-03:00"
+  },
+  {
+   "caminho": "logs/pig_concordancia.csv",
+   "md5": "70be12267fc4e5ebe3893d6c7c5c4537",
+   "bytes": 6729,
+   "n_linhas": 70,
+   "n_colunas": 11,
+   "colunas": [
+    {
+     "nome": "curva_a",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "curva_b",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ano",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "suprimido",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_pig_ambas",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_pig_so_a",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_pig_so_b",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_nenhuma",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "concordancia_pct",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "kappa",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "07b_pig_classificacao.R",
+   "sigilo": "publico",
+   "descricao": "concordância entre as curvas do PIG",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "07b_pig_classificacao.R@2026-10-08T20:09:18-03:00#86269-1791500958779040",
+    "insumos": {
+     "06_processados/nascimentos.parquet": "3a78e7ddcfd1f3c4f86e910087347698",
+     "07_pig_referencia/oms_kiserud2017_p10.csv": "44d8d12044826f984a9d821e221dffa6",
+     "07_pig_referencia/pedreira2011_p10.csv": "2a82b376a80a63799f4c89bef8dc794a",
+     "07_pig_referencia/07b_pig_classificacao.R": "fc1ab1ca1d0d8d9d6f69ec0d61ae80a0"
+    }
+   },
+   "modificado_em": "2026-10-08T20:09:17-03:00"
+  },
+  {
+   "caminho": "logs/aceite_fase1_uf_ano.csv",
+   "md5": "7821feb1650bfa3d3f8332dc6f7a13a6",
+   "bytes": 57876,
+   "n_linhas": 1188,
+   "n_colunas": 8,
+   "colunas": [
+    {
+     "nome": "sistema",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "ano",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "uf",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "referencia",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_base",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n_ref",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "dif",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "pct_mun_invalido",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "98_aceite_fase1.py",
+   "sigilo": "publico",
+   "descricao": "aceite UF × ano da fase 1",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "98_aceite_fase1.py@2026-10-06T11:27:47-03:00#8404-1791296867860219000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "logs/referencia_tabnet_sim_2022_2024.json": "54e9a7c34e8d8f0d97b59aecedd69b19",
+     "05_shapefiles/municipios_2024.gpkg": "4bfc8e8bbba34ca504328464fc1b4a5d",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2011.parquet": "57e16ab4c0d914e8f936287a90847052",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2012.parquet": "5fcd60adf428ff37242baf12671527a9",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2013.parquet": "d867acd45b540b6079b1a4275b17f30c",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2014.parquet": "cecbc63b5b757cf7cc5cfaa1d6e05372",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2015.parquet": "54034144711bbfd2de330ed79396d7b2",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2016.parquet": "7cf313219e4a6e26f8c2fcb4b4cf8953",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2017.parquet": "b586d66f223b59d09cc35d792f9adbf6",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2018.parquet": "36d7765784a564ba7d1341836c9fbb8e",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2019.parquet": "8de54a0d339f49618ac8e2c7f4cdd134",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2020.parquet": "e823afc7202ea7f949445c1af00f3201",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2021.parquet": "e6d8351b83263bd7742c01470adcf367",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2022.parquet": "e7506853e5eaf0c184ca153dcf33194f",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2023.parquet": "364a236e7622d9bebaa31bf302f8e562",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/SINASC/sinasc_2024.parquet": "dfbe0bd7bd4ec9c0d12d730710cf0820",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2011.parquet": "e0e6f2f888b523a78cbb70d872ebcb08",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2012.parquet": "4f631a88302a4cb7d2c5465c7095665f",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2013.parquet": "08ff5f6d3ef28316445e706e5c736357",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2014.parquet": "256db896ef60a4296774e42ead0bdd21",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2015.parquet": "151c3edae57d838c1b56d15769185bee",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2016.parquet": "98ee0eec016c6168ab0f27e21cc3c7b4",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2017.parquet": "1d3e063fceb6e001bb77faad11788497",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2018.parquet": "036a6635b5fc984a923569d77cebe41b",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2019.parquet": "c854d45d3e0f17ea2e8185cb42642abb",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2020.parquet": "56dd08cc3a3a415273091ea2ad8cd6c9",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2021.parquet": "d20d0e565155665f29d753d19a5e165b",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_2022.parquet": "f1502c34561a12283199fddbf3678f9d",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2011.parquet": "9b1046ea0328782fe8120f59802c5751",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2012.parquet": "5d5d6a6a9a2e30fcf1fb00e620a21058",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2013.parquet": "883c8535a3a2a0075cb38ef8b5cc027f",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2014.parquet": "5c1f689547fb8fed72023b1b61562cd7",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2015.parquet": "d1ce7c34d198e4975fddc84ba0bc4dcf",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2016.parquet": "e52cbed36d41ba1e723a7e13edc9e189",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2017.parquet": "6d105db0ab1b5f19d9216c069ea364a2",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2018.parquet": "432246c9e17a9fa5590d753bab5deac6",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2019.parquet": "477415521f84873bdedc765ae45ec36b",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2020.parquet": "b333e120b5e782ca78498d45e9da8644",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2021.parquet": "a685529982c2a9bf56fb955804fc5c29",
+     "meta:/Volumes/Forja/CliMaterna/01_data/raw/DATASUS/sim_dofet/dofet_raw_2022.parquet": "bb5b2aaf64a8433492a2b145af117acc",
+     "00_scripts/98_aceite_fase1.py": "47e974a4766e8deebd1b2372662d5b47",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:27:47-03:00"
+  },
+  {
+   "caminho": "logs/codigos_residencia_fora_ibge.csv",
+   "md5": "188ece400ae47d9aa726976b4ec1d166",
+   "bytes": 70,
+   "n_linhas": 0,
+   "n_colunas": 6,
+   "colunas": [
+    {
+     "nome": "sistema",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "codigo",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "n",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "anos",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "uf",
+     "tipo": "string (CSV)"
+    },
+    {
+     "nome": "mesmo_prefixo_de_municipio_das_concentracoes",
+     "tipo": "string (CSV)"
+    }
+   ],
+   "gerado_por": "98b_codigos_residencia.py",
+   "sigilo": "publico",
+   "descricao": "B19: códigos de residência fora da lista do IBGE",
+   "conferido_integridade": false,
+   "proveniencia": {
+    "execucao": "98b_codigos_residencia.py@2026-10-06T11:27:49-03:00#8420-1791296869234317000",
+    "insumos": {
+     "integridade:SINASC": "dbcb6edfba9d439d362fe45e91761aa8",
+     "integridade:SIM-DO": "14981c5200475726ac9ea9e342f1f1a3",
+     "integridade:SIM-DOFET": "aadc0d4213636e3b14fbdbf69ab86ad9",
+     "04_regioes_metropolitanas/populacao_censo2022.csv": "5c6c35238f22f7f821354a5611b8fb75",
+     "04_regioes_metropolitanas/municipios_novos_origem.csv": "1468fb4728dc2eeb274672f93564a676",
+     "04_regioes_metropolitanas/concentracoes_urbanas_municipios.csv": "c118857dbc825f182735f847e927a8d7",
+     "00_scripts/98b_codigos_residencia.py": "f2e858bd20395b00cb9de041360cafd1",
+     "00_scripts/config.py": "3cab8d1c1bc43fa0f477be63549943e8",
+     "00_scripts/utils.py": "f99be9aad52304ad2eadbb9b17d80ecc"
+    }
+   },
+   "modificado_em": "2026-10-06T11:27:49-03:00"
+  }
+ ]
+}

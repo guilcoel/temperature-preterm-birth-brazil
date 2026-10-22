@@ -1,0 +1,10 @@
+Package: dlnmperinatal
+Title: Funcoes Compartilhadas dos Artigos DLNM Perinatal e Clima
+Version: 1.0.0
+Description: Funcoes genericas dos tres artigos. R/offset.R: calcula_wj() e monta_offset() (offset de gestacoes
+    em risco; Fase 1 do Artigo 1). R/ajusta_dlnm.R: ajusta_dlnm() e spec_agudo(), v1.0, so o desenho agudo
+    (Fase 2 do Artigo 1; tag ajusta_dlnm-v1.0, commit caf5022). Testes em tests/ (R base). O codigo de
+    terceiros fica em inst/terceiros/, sem alteracao e fora de R/.
+Imports: stats, utils, dlnm, gnm
+License: a definir
+Encoding: UTF-8
